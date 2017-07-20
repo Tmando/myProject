@@ -1,0 +1,152 @@
+<html>
+<head>
+<link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine_favicon.png">
+<link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine.css">
+
+<script type="text/javascript" src="jasmine/lib/jasmine.js"></script>
+<script type="text/javascript" src="jasmine/lib/jasmine-html.js"></script>
+<script type="text/javascript" src="jasmine/lib/boot.js"></script>
+<script>
+//exercise1
+	function crystalGazer(childnr, job, partnerName, geographic){
+		
+		return "You will be a ",job," in ", geographic," and married to ",partnerName, " with ",childnr,".";
+	}
+	//crystalGazer(3, "web developer", "Peter", "London");
+	//document.write("<br>")
+	//crystalGazer(5, "Puff besitzer", "Gregor", "Wien");
+
+	
+	//exercise 2
+	function ageCalculator(year, currentYear){
+		var result=currentYear-year;
+		secRes = result-1;
+		return result + ' or ' + secRes;
+	}
+
+	describe("Test Suite", function() {
+		it("converts litres to gallons", function () {
+        	expect(ageCalculator(2016-2013)).toEqual(3 + ' or ' + 4);
+    	});
+	});
+	//document.write("<br>");
+	//ageCalculator(1993,2017);
+	//document.write("<br>");
+	//ageCalculator(1970,2017);
+
+	//exercise 3
+	function ageCalculator2(year){
+		curDate = new Date();
+		var result=curDate.getFullYear()-year;
+		secRes = result-1;
+		return result + ' or ' + secRes;
+		
+	}
+	//document.write("<br>");
+	//ageCalculator2(1993);
+	//document.write("<br>");	
+	//ageCalculator2(1970);
+
+	//exercise 4
+	function degreesToRadian(degree){
+		var radian=degree*(Math.PI/180);
+		return radian;
+	}
+	//document.write("<br>");
+	//document.write(degreesToRadian(25));
+
+	function areaVolume(width,height,depth){
+	var area=width*height;
+	var volume=width*height*depth;
+	var areaString="The area of the box is: "+area+"<br>"+" The Volume of the box is: "+volume;
+	return areaString;
+	}
+
+	function avrege(math,phisic,english){
+ 	var finalStr = '';
+ 	try{
+ 	var finalGrade=(Number(math)+Number(phisic)+Number(english))/3;
+ 	var sumGrade=(Number(math)+Number(phisic)+Number(english));
+ 	finalStr = 'Sum: '+ sumGrade + '<br>' + "Avarage: " + finalGrade;
+
+	}catch(err){
+		console.log("Something is wrong");
+ 	
+ 	}
+ 	return finalStr;
+	}
+	
+	
+	function resizeWindow(){
+	var width=window.innerWidth;
+	var height=window.innerHeight;
+	return 'Width' + width + 'Height' + height
+	}
+
+	var currentstring='i am a developer';
+
+	var anonym=function(currentstring){
+    		var newString=currentstring.charAt(0).toUpperCase()+currentstring.slice(1);
+    
+    	return newString;
+	}
+
+	function convertTime(minutes){
+	var hour=parseInt(minutes/60);
+	var minutesoutput=minutes%60;
+	return minutes+ " = "+hour+" hour(s) "+" and "+minutesoutput+" minute(s).";
+	}
+
+	var yesterdayDate=function(date){
+	curDate = new Date(date);
+	curDate.setDate(curDate.getDate()-1);
+	//return curDate.getDay()+curDate.getMonth()+curDate.getDate()+curDate.getFullYear();
+	return curDate.toISOString();
+	}
+
+	function randomColor(){
+	var r=Math.floor(Math.random()*256);
+	var g=Math.floor(Math.random()*256);
+	var b=Math.floor(Math.random()*256);
+	var result= "rgb("+r+","+g+","+b+")";
+	return result;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body></body>
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
